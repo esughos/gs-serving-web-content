@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Checkout') {
           steps {
-            git 'https://github.com/esughos/gs-serving-web-content.gitt'
+            git 'https://github.com/esughos/gs-serving-web-content.git'
           }
         }
         stage('Build') {
