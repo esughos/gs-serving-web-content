@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('Checkout') {
           steps {
-            git 'https://github.com/effectivejenkins/gs-serving-web-content.git'
+            git 'https://github.com/esughos/gs-serving-web-content.gitt'
           }
         }
         stage('Build') {
@@ -21,11 +21,7 @@ pipeline {
                 sh 'gradle integrationTest'
             }
         }
-        stage('Code Coverage') {
-          steps {
-            jacoco changeBuildStatus: true, maximumLineCoverage: '50'
-          }
-        }
+        
     }
     post {
         always {
